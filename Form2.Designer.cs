@@ -43,9 +43,11 @@
             this.totalFeeTextBox = new System.Windows.Forms.TextBox();
             this.privateRadioButton = new System.Windows.Forms.RadioButton();
             this.medicalRadioButton = new System.Windows.Forms.RadioButton();
-            this.privateRoomCheckBox = new System.Windows.Forms.CheckBox();
             this.addOnReportCheckBox = new System.Windows.Forms.CheckBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.servicesListBox = new System.Windows.Forms.CheckedListBox();
+            this.listRecords = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dashboardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,6 +134,7 @@
             this.calculateButton.TabIndex = 9;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = false;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // registerButton
             // 
@@ -145,6 +148,7 @@
             this.registerButton.TabIndex = 10;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // clearButton
             // 
@@ -158,13 +162,14 @@
             this.clearButton.TabIndex = 11;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // fullNameTextBox
             // 
             this.fullNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullNameTextBox.Location = new System.Drawing.Point(159, 102);
             this.fullNameTextBox.Name = "fullNameTextBox";
-            this.fullNameTextBox.Size = new System.Drawing.Size(386, 25);
+            this.fullNameTextBox.Size = new System.Drawing.Size(427, 25);
             this.fullNameTextBox.TabIndex = 12;
             // 
             // ageTextBox
@@ -207,46 +212,75 @@
             this.medicalRadioButton.Text = "Medical Aid";
             this.medicalRadioButton.UseVisualStyleBackColor = true;
             // 
-            // privateRoomCheckBox
-            // 
-            this.privateRoomCheckBox.AutoSize = true;
-            this.privateRoomCheckBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.privateRoomCheckBox.Location = new System.Drawing.Point(428, 182);
-            this.privateRoomCheckBox.Name = "privateRoomCheckBox";
-            this.privateRoomCheckBox.Size = new System.Drawing.Size(142, 29);
-            this.privateRoomCheckBox.TabIndex = 17;
-            this.privateRoomCheckBox.Text = "Private Room";
-            this.privateRoomCheckBox.UseVisualStyleBackColor = true;
-            // 
             // addOnReportCheckBox
             // 
             this.addOnReportCheckBox.AutoSize = true;
             this.addOnReportCheckBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addOnReportCheckBox.Location = new System.Drawing.Point(428, 214);
+            this.addOnReportCheckBox.Location = new System.Drawing.Point(425, 210);
             this.addOnReportCheckBox.Name = "addOnReportCheckBox";
             this.addOnReportCheckBox.Size = new System.Drawing.Size(158, 29);
             this.addOnReportCheckBox.TabIndex = 18;
             this.addOnReportCheckBox.Text = "Add-On Report";
             this.addOnReportCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox1
+            // servicesListBox
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(213, 183);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(183, 100);
-            this.checkedListBox1.TabIndex = 20;
+            this.servicesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.servicesListBox.FormattingEnabled = true;
+            this.servicesListBox.Items.AddRange(new object[] {
+            "Assessment",
+            "Therapy Session",
+            "Report"});
+            this.servicesListBox.Location = new System.Drawing.Point(213, 183);
+            this.servicesListBox.Name = "servicesListBox";
+            this.servicesListBox.Size = new System.Drawing.Size(192, 100);
+            this.servicesListBox.TabIndex = 20;
+            // 
+            // listRecords
+            // 
+            this.listRecords.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listRecords.FormattingEnabled = true;
+            this.listRecords.ItemHeight = 25;
+            this.listRecords.Location = new System.Drawing.Point(57, 417);
+            this.listRecords.Name = "listRecords";
+            this.listRecords.Size = new System.Drawing.Size(529, 104);
+            this.listRecords.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(420, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 25);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Add-ons:";
+            // 
+            // dashboardButton
+            // 
+            this.dashboardButton.BackColor = System.Drawing.Color.Navy;
+            this.dashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dashboardButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboardButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dashboardButton.Location = new System.Drawing.Point(487, 22);
+            this.dashboardButton.Name = "dashboardButton";
+            this.dashboardButton.Size = new System.Drawing.Size(183, 37);
+            this.dashboardButton.TabIndex = 23;
+            this.dashboardButton.Text = "Dashboard";
+            this.dashboardButton.UseVisualStyleBackColor = false;
+            this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
             // clientAndFeeCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(682, 419);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(682, 537);
+            this.Controls.Add(this.dashboardButton);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.listRecords);
+            this.Controls.Add(this.servicesListBox);
             this.Controls.Add(this.addOnReportCheckBox);
-            this.Controls.Add(this.privateRoomCheckBox);
             this.Controls.Add(this.medicalRadioButton);
             this.Controls.Add(this.privateRadioButton);
             this.Controls.Add(this.totalFeeTextBox);
@@ -287,8 +321,10 @@
         private System.Windows.Forms.TextBox totalFeeTextBox;
         private System.Windows.Forms.RadioButton privateRadioButton;
         private System.Windows.Forms.RadioButton medicalRadioButton;
-        private System.Windows.Forms.CheckBox privateRoomCheckBox;
         private System.Windows.Forms.CheckBox addOnReportCheckBox;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox servicesListBox;
+        private System.Windows.Forms.ListBox listRecords;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button dashboardButton;
     }
 }

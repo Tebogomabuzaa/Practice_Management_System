@@ -1,6 +1,6 @@
 ﻿namespace CMPG122_FINAL_ASSESSMENT
 {
-    partial class Form3
+    partial class SOTDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -115,6 +115,7 @@
             this.backButton.TabIndex = 14;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // exportSummaryButton
             // 
@@ -128,6 +129,7 @@
             this.exportSummaryButton.TabIndex = 13;
             this.exportSummaryButton.Text = "Export Summary";
             this.exportSummaryButton.UseVisualStyleBackColor = false;
+            this.exportSummaryButton.Click += new System.EventHandler(this.exportSummaryButton_Click);
             // 
             // refreshButton
             // 
@@ -141,6 +143,7 @@
             this.refreshButton.TabIndex = 12;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // revenueLabel
             // 
@@ -149,7 +152,6 @@
             this.revenueLabel.Name = "revenueLabel";
             this.revenueLabel.Size = new System.Drawing.Size(246, 203);
             this.revenueLabel.TabIndex = 0;
-            this.revenueLabel.Text = "label10";
             // 
             // panel2
             // 
@@ -174,9 +176,8 @@
             this.avgFeeLabel.ForeColor = System.Drawing.Color.Navy;
             this.avgFeeLabel.Location = new System.Drawing.Point(222, 82);
             this.avgFeeLabel.Name = "avgFeeLabel";
-            this.avgFeeLabel.Size = new System.Drawing.Size(66, 24);
+            this.avgFeeLabel.Size = new System.Drawing.Size(0, 24);
             this.avgFeeLabel.TabIndex = 15;
-            this.avgFeeLabel.Text = "label9";
             // 
             // outstandingClaimsLabel
             // 
@@ -185,9 +186,8 @@
             this.outstandingClaimsLabel.ForeColor = System.Drawing.Color.Navy;
             this.outstandingClaimsLabel.Location = new System.Drawing.Point(222, 116);
             this.outstandingClaimsLabel.Name = "outstandingClaimsLabel";
-            this.outstandingClaimsLabel.Size = new System.Drawing.Size(66, 24);
+            this.outstandingClaimsLabel.Size = new System.Drawing.Size(0, 24);
             this.outstandingClaimsLabel.TabIndex = 14;
-            this.outstandingClaimsLabel.Text = "label8";
             // 
             // totalRevenueLabel
             // 
@@ -196,9 +196,8 @@
             this.totalRevenueLabel.ForeColor = System.Drawing.Color.Navy;
             this.totalRevenueLabel.Location = new System.Drawing.Point(222, 47);
             this.totalRevenueLabel.Name = "totalRevenueLabel";
-            this.totalRevenueLabel.Size = new System.Drawing.Size(66, 24);
+            this.totalRevenueLabel.Size = new System.Drawing.Size(0, 24);
             this.totalRevenueLabel.TabIndex = 13;
-            this.totalRevenueLabel.Text = "label7";
             // 
             // totalClientsLabel
             // 
@@ -207,9 +206,8 @@
             this.totalClientsLabel.ForeColor = System.Drawing.Color.Navy;
             this.totalClientsLabel.Location = new System.Drawing.Point(222, 12);
             this.totalClientsLabel.Name = "totalClientsLabel";
-            this.totalClientsLabel.Size = new System.Drawing.Size(66, 24);
+            this.totalClientsLabel.Size = new System.Drawing.Size(0, 24);
             this.totalClientsLabel.TabIndex = 12;
-            this.totalClientsLabel.Text = "label6";
             // 
             // label5
             // 
@@ -247,7 +245,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Total Clients:";
             // 
-            // Form3
+            // SOTDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,7 +258,7 @@
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form3";
+            this.Name = "SOTDashboard";
             this.Text = "SOT - Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.recentRegistrationsGroupBox2.ResumeLayout(false);
