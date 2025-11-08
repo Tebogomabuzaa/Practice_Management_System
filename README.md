@@ -96,6 +96,8 @@ CMPG122_FINAL_ASSESSMENT/
 ├── SOT_summary_exports.txt               # Stores exported summaries
 └── README.md                             # Project documentation
 ```
+---
+
 🧮 Example Data
 
 SOT_records.txt
@@ -105,6 +107,8 @@ SOT_records.txt
 
 SOT_summary_exports.txt
 2025-11-08 06:28	Clients: 11	Revenue: R 6450,50
+
+---
 
 ⚙️ Setup & Running
 
@@ -122,6 +126,8 @@ git clone https://github.com/<your-username>/CMPG122_FINAL_ASSESSMENT.git
 	4.	Login using:
 Username: admin
 Password: sot2025
+
+---
 
 🎥 Demonstration
 
