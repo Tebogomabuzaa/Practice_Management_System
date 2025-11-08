@@ -114,11 +114,10 @@ SOT_summary_exports.txt
 ⚙️ Setup & Running
 
 🔧 Prerequisites
-```
+
 	•	Visual Studio 2022 or later
 	•	.NET Framework (Windows Forms)
 	•	OS: Windows 10/11
-```
 
 ▶️ How to Run
 ```
