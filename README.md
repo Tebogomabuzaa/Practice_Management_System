@@ -75,7 +75,7 @@ else
     revenueLabelKPI.BackColor = Color.DarkRed;
     revenueLabelKPI.ForeColor = Color.White;
 }
-
+```
 ---
 
 📂 Project Structure
