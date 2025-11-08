@@ -159,7 +159,7 @@ This project was created for educational purposes as part of the CMPG122 module 
 All rights reserved © 2025 — Tebogo Jr Mabuza.
 
 📬 Contact
-
+```
 👤 Tebogo Jr Mabuza
 📧 Email: tebogomabuzaa@gmail.com
 🎓 Student Number: 49461168
