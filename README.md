@@ -100,6 +100,7 @@ CMPG122_FINAL_ASSESSMENT/
 
 🧮 Example Data
 
+```
 SOT_records.txt
 2025-11-07 22:04	SOT-723218	James Blake	25	Medical Aid	513,00
 2025-11-07 22:45	SOT-316646	Princess Vilakazi	7	Medical Aid	665,00
@@ -107,17 +108,20 @@ SOT_records.txt
 
 SOT_summary_exports.txt
 2025-11-08 06:28	Clients: 11	Revenue: R 6450,50
-
+```
 ---
 
 ⚙️ Setup & Running
 
 🔧 Prerequisites
+```
 	•	Visual Studio 2022 or later
 	•	.NET Framework (Windows Forms)
 	•	OS: Windows 10/11
+```
 
 ▶️ How to Run
+```
 	1.	Clone this repository:
 git clone https://github.com/<your-username>/CMPG122_FINAL_ASSESSMENT.git
 
@@ -126,7 +130,7 @@ git clone https://github.com/<your-username>/CMPG122_FINAL_ASSESSMENT.git
 	4.	Login using:
 Username: admin
 Password: sot2025
-
+```
 ---
 
 🎥 Demonstration
