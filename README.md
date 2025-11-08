@@ -76,6 +76,8 @@ else
     revenueLabelKPI.ForeColor = Color.White;
 }
 
+---
+
 📂 Project Structure
 
 CMPG122_FINAL_ASSESSMENT/
