@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;      // For culture-aware parsing
 
 namespace CMPG122_FINAL_ASSESSMENT
 {
@@ -24,6 +25,18 @@ namespace CMPG122_FINAL_ASSESSMENT
         {
             InitializeComponent();
             LoadRecordsFromFile();
+            PopulateServices();
+        }
+
+        private void PopulateServices()
+        {
+            if (servicesListBox.Items.Count == 0)
+            {
+                for (int i = 0; i < serviceNames.Length; i++)
+                {
+                    servicesListBox.Items.Add(serviceNames[i]);
+                }
+            }
         }
 
 
@@ -33,10 +46,10 @@ namespace CMPG122_FINAL_ASSESSMENT
             decimal total = 0m;
 
             // Sum selected service fees (array search)
-            for (int i = 0; i < servicesListBox.SelectedItems.Count; i++)
+            for (int i = 0; i < servicesListBox.CheckedItems.Count; i++)
             {
-                string selected = servicesListBox.SelectedItems[i].ToString();
-                for (int k = 0; k < servicePrices.Length; k++)
+                string selected = servicesListBox.CheckedItems[i].ToString();
+                for (int k = 0; k < serviceNames.Length; k++)
                 {
                     if (selected == serviceNames[k])
                     {
@@ -88,7 +101,7 @@ namespace CMPG122_FINAL_ASSESSMENT
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            if (servicesListBox.SelectedItems.Count == 0)
+            if (servicesListBox.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select at least one service.");
                 return;
@@ -100,7 +113,7 @@ namespace CMPG122_FINAL_ASSESSMENT
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            if (servicesListBox.SelectedItems.Count == 0)
+            if (servicesListBox.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Select at least one service before registering.");
                 return;
@@ -109,7 +122,7 @@ namespace CMPG122_FINAL_ASSESSMENT
             // Calculate base total using the method that returns decimal
             decimal total = CalculateTotalFee();
 
-            // Ref-method to permanently modify the monetary value
+            // Ref-method to modify the monetary value
             ApplyFeeAdjustment(ref total, 5m);
 
             // Generate simple client ID using loop
@@ -132,10 +145,10 @@ namespace CMPG122_FINAL_ASSESSMENT
                 funding = "Medical Aid";
             }
 
-            string timestap = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 
             // Simple tab-separated reord (fee stored as F2 string)
-            string line = timestap + "\t" + clientId + "\t" + name + "\t" + age + "\t" + funding + "\t" + total.ToString("F2");
+            string line = timestamp + "\t" + clientId + "\t" + name + "\t" + age + "\t" + funding + "\t" + total.ToString("F2");
 
             try
             {
@@ -157,11 +170,16 @@ namespace CMPG122_FINAL_ASSESSMENT
             // Clear all textboxes, uncheck boxes, deselect list items
             fullNameTextBox.Clear();
             ageTextBox.Clear();
-            servicesListBox.ClearSelected();
+
+            // Uncheck all items in CheckedListBox
+            for (int i = 0; i < servicesListBox.Items.Count; i++)
+            {
+                servicesListBox.SetItemChecked(i, false);
+            }
+
             addOnReportCheckBox.Checked = false;
-            privateRadioButton.Checked = false;
-            medicalRadioButton.Checked = false;
-            totalFeeTextBox.Clear();
+            privateRadioButton.Checked = true;
+            totalFeeTextBox.Text = "R 0.00";
         }
 
         private void dashboardButton_Click(object sender, EventArgs e)
@@ -185,7 +203,7 @@ namespace CMPG122_FINAL_ASSESSMENT
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (line == "")
+                    if (string.IsNullOrWhiteSpace(line))
                     {
                         continue;
                     }

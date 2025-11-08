@@ -22,39 +22,31 @@ namespace CMPG122_FINAL_ASSESSMENT
 
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+    private void loginButton_Click(object sender, EventArgs e)
+    {
+        string username = usernameTextBox.Text;
+        string password = passwordTextBox.Text;
+
+        if ((username == "admin" && password == "sot2025") ||
+            (username == "locum" && password == "care2025"))
         {
-            // Capture Input
-            string username = usernameTextBox.Text;
-            string password = passwordTextBox.Text;
+            messageLabel.ForeColor = Color.LightGreen;
+            messageLabel.Text = "Login successful";
 
-            // Validate Credentials (Hardcoded username & password)
-            if (username == "admin" && password == "sot2025" ||
-                username == "locum" && password == "care2025")
-            {
-                // Use module for password validation
-                // If valid, message label show login successful
-                messageLabel.ForeColor = Color.LightGreen;
-                messageLabel.Text = "Login Successfull";
-
-                // Open Form2 (Intake) and hide form
-                clientAndFeeCalc Form2 = new clientAndFeeCalc();
-                Form2.ShowDialog();
-
-                // Hide Form1
-                this.Hide();
-            }
-            else
-            {
-                // Display invalid credentials entered message
-                messageLabel.ForeColor = Color.LightYellow;
-                messageLabel.Text = "Invalid Credentials. Try again.";
-
-                // Clear the password TextBox and set focus()
-                passwordTextBox.Clear();
-                passwordTextBox.Focus();
-            }
+            // Open Intake form and hide login while intake is open
+            clientAndFeeCalc form2 = new clientAndFeeCalc();
+            form2.FormClosed += (s, ev) => { this.Show(); }; // show login again if needed
+            this.Hide();
+            form2.Show(); // non-modal so user can come back to login when intake closes
         }
+        else
+        {
+            messageLabel.ForeColor = Color.LightYellow;
+            messageLabel.Text = "Invalid credentials. Try again.";
+            passwordTextBox.Clear();
+            passwordTextBox.Focus();
+        }
+    }
 
         private void exitButton_Click(object sender, EventArgs e)
         {

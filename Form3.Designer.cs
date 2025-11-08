@@ -31,12 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.recentRegistrationsGroupBox2 = new System.Windows.Forms.GroupBox();
-            this.listViewRecent = new System.Windows.Forms.ListBox();
+            this.listViewRecent = new System.Windows.Forms.ListView();
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ClientID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Fee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelKpiVisual = new System.Windows.Forms.Panel();
+            this.revenueLabelKPI = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.exportSummaryButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
-            this.revenueLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.avgFeeLabel = new System.Windows.Forms.Label();
             this.outstandingClaimsLabel = new System.Windows.Forms.Label();
@@ -46,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.recentRegistrationsGroupBox2.SuspendLayout();
             this.panelKpiVisual.SuspendLayout();
@@ -79,29 +84,69 @@
             this.recentRegistrationsGroupBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recentRegistrationsGroupBox2.Location = new System.Drawing.Point(31, 255);
             this.recentRegistrationsGroupBox2.Name = "recentRegistrationsGroupBox2";
-            this.recentRegistrationsGroupBox2.Size = new System.Drawing.Size(463, 147);
+            this.recentRegistrationsGroupBox2.Size = new System.Drawing.Size(560, 147);
             this.recentRegistrationsGroupBox2.TabIndex = 7;
             this.recentRegistrationsGroupBox2.TabStop = false;
             this.recentRegistrationsGroupBox2.Text = "Recent Registrations List";
             // 
             // listViewRecent
             // 
-            this.listViewRecent.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.listViewRecent.FormattingEnabled = true;
-            this.listViewRecent.ItemHeight = 20;
-            this.listViewRecent.Location = new System.Drawing.Point(6, 32);
+            this.listViewRecent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Date,
+            this.ClientID,
+            this.nameColumnHeader,
+            this.Fee});
+            this.listViewRecent.FullRowSelect = true;
+            this.listViewRecent.GridLines = true;
+            this.listViewRecent.HideSelection = false;
+            this.listViewRecent.Location = new System.Drawing.Point(8, 32);
             this.listViewRecent.Name = "listViewRecent";
-            this.listViewRecent.Size = new System.Drawing.Size(445, 104);
-            this.listViewRecent.TabIndex = 0;
+            this.listViewRecent.Size = new System.Drawing.Size(546, 109);
+            this.listViewRecent.TabIndex = 1;
+            this.listViewRecent.UseCompatibleStateImageBehavior = false;
+            this.listViewRecent.View = System.Windows.Forms.View.Details;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Date";
+            this.Date.Width = 140;
+            // 
+            // ClientID
+            // 
+            this.ClientID.Text = "Client ID";
+            this.ClientID.Width = 120;
+            // 
+            // nameColumnHeader
+            // 
+            this.nameColumnHeader.Text = "Name";
+            this.nameColumnHeader.Width = 160;
+            // 
+            // Fee
+            // 
+            this.Fee.Text = "Fee";
+            this.Fee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Fee.Width = 120;
             // 
             // panelKpiVisual
             // 
-            this.panelKpiVisual.Controls.Add(this.revenueLabel);
+            this.panelKpiVisual.Controls.Add(this.label6);
+            this.panelKpiVisual.Controls.Add(this.revenueLabelKPI);
             this.panelKpiVisual.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelKpiVisual.Location = new System.Drawing.Point(500, 97);
+            this.panelKpiVisual.Location = new System.Drawing.Point(618, 95);
             this.panelKpiVisual.Name = "panelKpiVisual";
             this.panelKpiVisual.Size = new System.Drawing.Size(274, 221);
             this.panelKpiVisual.TabIndex = 8;
+            // 
+            // revenueLabelKPI
+            // 
+            this.revenueLabelKPI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.revenueLabelKPI.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenueLabelKPI.Location = new System.Drawing.Point(14, 84);
+            this.revenueLabelKPI.Name = "revenueLabelKPI";
+            this.revenueLabelKPI.Size = new System.Drawing.Size(246, 125);
+            this.revenueLabelKPI.TabIndex = 0;
+            this.revenueLabelKPI.Text = "ffff";
+            this.revenueLabelKPI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // backButton
             // 
@@ -109,7 +154,7 @@
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.backButton.Location = new System.Drawing.Point(500, 371);
+            this.backButton.Location = new System.Drawing.Point(618, 369);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(274, 31);
             this.backButton.TabIndex = 14;
@@ -123,7 +168,7 @@
             this.exportSummaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exportSummaryButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportSummaryButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exportSummaryButton.Location = new System.Drawing.Point(640, 334);
+            this.exportSummaryButton.Location = new System.Drawing.Point(758, 332);
             this.exportSummaryButton.Name = "exportSummaryButton";
             this.exportSummaryButton.Size = new System.Drawing.Size(134, 31);
             this.exportSummaryButton.TabIndex = 13;
@@ -137,21 +182,13 @@
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.refreshButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.refreshButton.Location = new System.Drawing.Point(500, 334);
+            this.refreshButton.Location = new System.Drawing.Point(618, 332);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(134, 31);
             this.refreshButton.TabIndex = 12;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
-            // 
-            // revenueLabel
-            // 
-            this.revenueLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.revenueLabel.Location = new System.Drawing.Point(15, 10);
-            this.revenueLabel.Name = "revenueLabel";
-            this.revenueLabel.Size = new System.Drawing.Size(246, 203);
-            this.revenueLabel.TabIndex = 0;
             // 
             // panel2
             // 
@@ -166,7 +203,7 @@
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(31, 97);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 152);
+            this.panel2.Size = new System.Drawing.Size(560, 152);
             this.panel2.TabIndex = 15;
             // 
             // avgFeeLabel
@@ -245,11 +282,22 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Total Clients:";
             // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(246, 60);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Revenue";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SOTDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 421);
+            this.ClientSize = new System.Drawing.Size(918, 421);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.panelKpiVisual);
@@ -259,7 +307,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SOTDashboard";
-            this.Text = "SOT - Dashboard";
+            this.Text = "SOTDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.recentRegistrationsGroupBox2.ResumeLayout(false);
             this.panelKpiVisual.ResumeLayout(false);
@@ -275,9 +323,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox recentRegistrationsGroupBox2;
-        private System.Windows.Forms.ListBox listViewRecent;
         private System.Windows.Forms.Panel panelKpiVisual;
-        private System.Windows.Forms.Label revenueLabel;
+        private System.Windows.Forms.Label revenueLabelKPI;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button exportSummaryButton;
         private System.Windows.Forms.Button refreshButton;
@@ -290,5 +337,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listViewRecent;
+        private System.Windows.Forms.ColumnHeader Date;
+        private System.Windows.Forms.ColumnHeader ClientID;
+        private System.Windows.Forms.ColumnHeader nameColumnHeader;
+        private System.Windows.Forms.ColumnHeader Fee;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -93,8 +93,8 @@
             this.loginButton.Location = new System.Drawing.Point(268, 187);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(134, 34);
-            this.loginButton.TabIndex = 5;
-            this.loginButton.Text = "Login";
+            this.loginButton.TabIndex = 2;
+            this.loginButton.Text = "&Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
@@ -108,7 +108,7 @@
             this.exitButton.Location = new System.Drawing.Point(419, 187);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(134, 34);
-            this.exitButton.TabIndex = 6;
+            this.exitButton.TabIndex = 3;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
@@ -119,7 +119,7 @@
             this.usernameTextBox.Location = new System.Drawing.Point(235, 105);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(343, 25);
-            this.usernameTextBox.TabIndex = 7;
+            this.usernameTextBox.TabIndex = 0;
             // 
             // passwordTextBox
             // 
@@ -127,7 +127,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(235, 144);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(343, 25);
-            this.passwordTextBox.TabIndex = 8;
+            this.passwordTextBox.TabIndex = 1;
             // 
             // pictureBox1
             // 

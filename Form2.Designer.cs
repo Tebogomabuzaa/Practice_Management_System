@@ -48,6 +48,7 @@
             this.listRecords = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dashboardButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -241,7 +242,7 @@
             this.listRecords.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listRecords.FormattingEnabled = true;
             this.listRecords.ItemHeight = 25;
-            this.listRecords.Location = new System.Drawing.Point(57, 417);
+            this.listRecords.Location = new System.Drawing.Point(57, 449);
             this.listRecords.Name = "listRecords";
             this.listRecords.Size = new System.Drawing.Size(529, 104);
             this.listRecords.TabIndex = 21;
@@ -270,12 +271,23 @@
             this.dashboardButton.UseVisualStyleBackColor = false;
             this.dashboardButton.Click += new System.EventHandler(this.dashboardButton_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(52, 421);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(166, 25);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Registered Clients:";
+            // 
             // clientAndFeeCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(682, 537);
+            this.ClientSize = new System.Drawing.Size(682, 565);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dashboardButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.listRecords);
@@ -326,5 +338,6 @@
         private System.Windows.Forms.ListBox listRecords;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button dashboardButton;
+        private System.Windows.Forms.Label label8;
     }
 }
