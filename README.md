@@ -80,6 +80,7 @@ else
 
 📂 Project Structure
 
+```
 CMPG122_FINAL_ASSESSMENT/
 │
 ├── CMPG122_FINAL_ASSESSMENT.sln          # Solution file
@@ -94,7 +95,7 @@ CMPG122_FINAL_ASSESSMENT/
 ├── SOT_records.txt                       # Stores client registration data
 ├── SOT_summary_exports.txt               # Stores exported summaries
 └── README.md                             # Project documentation
-
+```
 🧮 Example Data
 
 SOT_records.txt
