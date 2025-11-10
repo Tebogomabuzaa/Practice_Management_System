@@ -176,6 +176,13 @@ The video showcases:
 
 ---
 
+📸 Screenshots
+
+| Login Form                           | Client Intake                          | Dashboard                                    |
+| ------------------------------------ | -------------------------------------- | -------------------------------------------- |
+| ![Login](docs/screenshots/login.png) | ![Intake](docs/screenshots/intake.png) | ![Dashboard](docs/screenshots/dashboard.png) |
+
+
 🚀 Future Improvements
 
 	•	Add database integration (SQLite or SQL Server) instead of text files.
