@@ -146,6 +146,36 @@ The video showcases:
 	•	Dashboard KPI updates and color changes
 	•	Explanation of core code and methods
 
+---
+
+### 🧱 Technical Concepts Demonstrated
+
+| Category | Concept |
+|---|---|
+| Programming Fundamentals | Loops, arrays, methods, decision structures |
+| UI Controls | CheckedListBox, ListView, RadioButtons, CheckBoxes, Labels, Buttons |
+| Parameter Passing | `ref` keyword (method that modifies a variable) |
+| File I/O | `StreamWriter` (append) and `StreamReader` |
+| Error Handling | `try-catch`, defensive parsing (`parts.Length >= 6`) |
+| Randomization | Random client ID generation using `Random` |
+| Data Visualization | KPI card color changes (set `BackColor` and `ForeColor` in code) |
+| Validation & UX | Input validation, Clear button unchecks items |
+
+---
+
+### 🧰 Tools & Technologies
+
+| Tool / Tech | Purpose |
+|---|---|
+| Visual Studio 2022 | IDE — code & debug Windows Forms app |
+| C# (.NET Framework) | Programming language / platform |
+| Windows Forms | GUI framework |
+| Git / GitHub | Version control and repo hosting |
+| Loom / OBS / Xbox Game Bar | Screen recording for demo video |
+| Clipchamp / Shotcut | Simple video editor for merging phone intro + screen capture |
+
+---
+
 🚀 Future Improvements
 
 	•	Add database integration (SQLite or SQL Server) instead of text files.
@@ -156,6 +186,7 @@ The video showcases:
 🧾 License
 
 This project was created for educational purposes as part of the CMPG122 module at North-West University.
+
 All rights reserved © 2025 — Tebogo Jr Mabuza.
 
 📬 Contact
