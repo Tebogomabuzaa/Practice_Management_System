@@ -182,6 +182,7 @@ The video showcases:
 | ------------------------------------ | -------------------------------------- | -------------------------------------------- |
 | ![Login](docs/screenshots/login.png) | ![Intake](docs/screenshots/intake.png) | ![Dashboard](docs/screenshots/dashboard.png) |
 
+---
 
 🚀 Future Improvements
 
