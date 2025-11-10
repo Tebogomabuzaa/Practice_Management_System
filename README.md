@@ -175,11 +175,15 @@ The video showcases:
 
 ---
 
-📸 Screenshots
+## 📸 Screenshots
 
-| Login Form                           | Client Intake                          | Dashboard                                    |
-| ------------------------------------ | -------------------------------------- | -------------------------------------------- |
-| ![Login](docs/screenshots/login.png) | ![Intake](docs/screenshots/intake.png) | ![Dashboard](docs/screenshots/dashboard.png) |
+Below are sample screenshots of the SOT Clinic Management System interface.
+
+| Login Form | Client Intake | Dashboard |
+|-------------|----------------|------------|
+| ![Login Form](docs/screenshots/Login%20Form.PNG) | ![Client Intake](docs/screenshots/Client%20Intake.PNG) | ![Dashboard](docs/screenshots/Dashboard.PNG) |
+
+Click any image to open it full-size.
 
 ---
 
