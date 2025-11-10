@@ -15,6 +15,26 @@
 
 ---
 
+## 🎯 Career Relevance — Connecting My Studies, Strengths, and Project
+
+Although this project was created as part of my **first-year CMPG122 module**, it represents more than just a coding task — it’s a reflection of how I think about **real-world business problems** and how technology can solve them.
+
+During my research for this project, I had a confidential conversation with a representative of an **occupational therapy clinic** who described key administrative challenges: manual client intake, data errors, and claim rejections. I studied their process, conducted basic desk research, and developed an **As-Is / To-Be value-chain model** to visualise how technology could simplify their workflow.  
+(Client identity and details remain confidential.)
+
+The **SOT Clinic Management System** was built as a **Version 1** prototype that:
+- Digitises client intake and fee calculation to reduce manual errors,  
+- Stores client records safely using text files for future use, and  
+- Displays KPIs to help clinic staff track performance visually.
+
+Even though I am still in my **first year of IT studies**, this project allowed me to apply and demonstrate the early-stage concepts I’m learning — like structured programming, input validation, loops, arrays, file handling, and modular design — while **thinking ahead** like a future business analyst or IT consultant.
+
+This project is a step toward my long-term goal of working in a **Business Analysis / IT Consulting** role — someone who understands both the technology and the business impact behind every system.
+
+
+---
+
+
 ## 🧠 Project Overview
 The **SOT Clinic Management System** is a **Windows Forms Application** created as the final assessment for CMPG122.  
 It simulates a clinic’s workflow, covering **patient intake**, **billing**, and **performance tracking**.
