@@ -122,13 +122,13 @@ SOT_summary_exports.txt
 ▶️ How to Run
 ```
 	1.	Clone this repository:
-git clone https://github.com/<your-username>/CMPG122_FINAL_ASSESSMENT.git
+			git clone https://github.com/Tebogomabuzaa/Practice_Management_System.git
 
-2.	Open CMPG122_FINAL_ASSESSMENT.sln in Visual Studio.
+	2.	Open CMPG122_FINAL_ASSESSMENT.sln in Visual Studio.
 	3.	Build and run the project.
 	4.	Login using:
-Username: admin
-Password: sot2025
+			Username: admin
+			Password: sot2025
 ```
 ---
 
