@@ -19,7 +19,7 @@
 The **SOT Clinic Management System** is a **Windows Forms Application** created as the final assessment for CMPG122.  
 It simulates a clinic’s workflow, covering **patient intake**, **billing**, and **performance tracking**.
 
-This project demonstrates proficiency in C# fundamentals (Chapters 1–9 from *Tony Gaddis — Starting Out with Visual C#*), showcasing key programming concepts like arrays, loops, file I/O, methods, and UI event handling.
+This project demonstrates proficiency in C# fundamentals, showcasing key programming concepts like arrays, loops, file I/O, methods, and UI event handling.
 
 ---
 
