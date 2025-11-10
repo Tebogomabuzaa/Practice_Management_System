@@ -171,8 +171,7 @@ The video showcases:
 | C# (.NET Framework) | Programming language / platform |
 | Windows Forms | GUI framework |
 | Git / GitHub | Version control and repo hosting |
-| Loom / OBS / Xbox Game Bar | Screen recording for demo video |
-| Clipchamp / Shotcut | Simple video editor for merging phone intro + screen capture |
+| Loom | Screen recording for demo video |
 
 ---
 
